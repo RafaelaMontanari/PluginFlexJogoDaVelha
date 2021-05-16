@@ -1,8 +1,12 @@
 import React from 'react';
 import { VERSION } from '@twilio/flex-ui';
 import { FlexPlugin } from 'flex-plugin';
+import { View } from '@twilio/flex-ui';
+import { ViewCollection } from '@twilio/flex-ui';
+import { SideNav } from '@twilio/flex-ui';
 import HashtagButton from './hashtagButton';
 import HashtagView from './hashtagView';
+import Scoreboard from './scoreboard'
 
 import CustomTaskListContainer from './components/CustomTaskList/CustomTaskList.Container';
 import reducers, { namespace } from './states';
@@ -25,18 +29,19 @@ export default class JogodaVelhaPlugin extends FlexPlugin {
     this.registerReducers(manager);
 
     const options = { sortOrder: 2 };
-    // flex.AgentDesktopView
-    //   .Panel1
-    //   .Content
-    //   .add(<CustomTaskListContainer key="JogodaVelhaPlugin-component" />, options);
-    flex.SideNav.Content.add(
+    SideNav.Content.add(
       <HashtagButton key="hashtag-button" />, options
     );
-    flex.ViewCollection.Content.add(
-      <View name="jogo-da-velha" key="jogo-da-velha">
+    ViewCollection.Content.add(
+      <View name="jogo-velha" key="jogo-velha">
         <HashtagView />
       </View>
     );
+    ViewCollection.Content.add(
+      <View name="scoreboard" key="scoreboard">
+      <Scoreboard />
+    </View>
+    )
   }
 
   /**

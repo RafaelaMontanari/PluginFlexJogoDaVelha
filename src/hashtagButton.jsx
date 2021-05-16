@@ -5,14 +5,14 @@ import imgHashtagOn from './assets/images/hashtagOn.png'
 
 const HashtagButton = ({activeView}) => {
     function navigate() {
-        Actions.invokeAction('NavigateToView', { viewName: 'jogo-da-velha'});
+        Actions.invokeAction('NavigateToView', { viewName: 'jogo-velha'});
     }
     return(
         <SideLink
             showLabel={true}
             icon={<img src={imgHashtagOff}/>}
             iconActive={<img src={imgHashtagOn}/>}
-            isActive={activeView === 'jogo-da-velha'}
+            isActive={activeView === 'jogo-velha'}
             onClick={navigate}
         >
             Jogo da Velha

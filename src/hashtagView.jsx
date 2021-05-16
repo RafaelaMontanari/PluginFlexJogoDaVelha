@@ -1,12 +1,11 @@
 import React from 'react'
+import Game from './app'
 
 
 export default class HashtagView extends React.Component {
     render(){
         return(
-            <div class="main">
-                <p>View</p>
-            </div>
+            <Game></Game>
         );
     }
 }

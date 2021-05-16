@@ -1,0 +1,38 @@
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0px;
+}
+
+.imageTrophy{
+    width: 60%;
+    height: 60%;
+    margin-top: 5px;
+}
+
+.scoreboard{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 24px;
+    flex-direction: column;
+    font-weight: lighter;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.titleScoreboard{
+    margin: 15px 0px 0px 0px;
+}
+
+.buttonScoreboard{
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.buttonScoreboard:hover{
+    background-color: #473080;
+    color: #FFFFFF;
+  }
